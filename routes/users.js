@@ -10,4 +10,7 @@ router.get('/', UserController.getAll);
 // inserta un usuario en la base de datos
 router.post('/', UserController.register);
 
+// borra un usuario en la base de datos
+router.delete('/:email', UserController.delete);
+
 module.exports = router;

@@ -20,24 +20,14 @@ const UserSchema = new mongoose.Schema({
         default: 'usuario',
         enum: ['admin', 'vendedor', 'usuario']
     },
-    // Administrador
-        equipo: Array,
-
-    // Vendedor
-        // Ventas realizadas por el vendedor
-        actosVenta: {
-            type: Array,
-        },
-
-    // Usuario
-        // dirección del usuario
-        direccion: {
-            type: String,
-        },
-        // Compras realizadas por el usuario
-        actosCompra: {
-            type: Array,
-        },
+    direccion: {
+        type: String,
+    },
+    fechaCreacion: {
+        type: Date,
+        default: Date.now
+    },
 });
+
 const User = mongoose.model('User', UserSchema);
 module.exports = User;
