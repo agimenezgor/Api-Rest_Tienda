@@ -15,15 +15,8 @@ const UserController = {
         // falta determinar un rol de usuario
         try {
             console.log(req.body);
-           const user = await User.create(req.body);
-           /* if(user.role == 'admin'){
-                console.log('admin');
-           }else if(user.role == 'usuario'){
-                user.model = 'superada';
-           }else {
-                console.log('vendedor');
-           } */
-           res.send({user, message: 'Usuario creado correctamente'});
+            const user = await User.create(req.body);
+            res.send({user, message: 'Usuario creado correctamente'});
         } catch (error) {
             console.log(error);
             res.status(500).send({message:'There was a problem trying to register the user', error});
