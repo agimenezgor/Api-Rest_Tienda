@@ -10,6 +10,16 @@ const UserController = {
              res.status(500).send({message:'There was a problem trying to get the users', error});
          }
     },
+    // devuelve todos los users con role de usuario
+    async getAllUsers(req, res){
+        try {
+            const users = await User.find({role:'usuario'});
+            res.send(users);
+         } catch (error) {
+             console.log(error);
+             res.status(500).send({message:'There was a problem trying to get all of users', error});
+         }
+    },
     async getByEmail(req, res){
         try {
             const user = await User.findOne({email:req.params.email});

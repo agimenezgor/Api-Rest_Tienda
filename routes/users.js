@@ -5,10 +5,13 @@ const UserController = require('../controllers/UserController');
 /* GET users listing. */
 
 // retorna todos los usuarios
-router.get('/', UserController.getAll);
+router.get('/all', UserController.getAll);
 
 // retorna un usuario a traves de su email
 router.get('/email/:email', UserController.getByEmail);
+
+// retorna todos los usuarios con role de usuario
+router.get('/all/user', UserController.getAllUsers);
 
 // inserta un usuario en la base de datos
 router.post('/', UserController.register);
