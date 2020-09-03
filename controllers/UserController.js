@@ -20,6 +20,27 @@ const UserController = {
              res.status(500).send({message:'There was a problem trying to get all of users', error});
          }
     },
+    // devuelve todos los users con role de vendedor
+    async getAllSellers(req, res){
+        try {
+            const users = await User.find({role:'vendedor'});
+            res.send(users);
+         } catch (error) {
+             console.log(error);
+             res.status(500).send({message:'There was a problem trying to get all of users', error});
+         }
+    },
+    // devuelve todos los users con role de administrador
+    async getAllAdmins(req, res){
+        try {
+            const users = await User.find({role:'admin'});
+            res.send(users);
+         } catch (error) {
+             console.log(error);
+             res.status(500).send({message:'There was a problem trying to get all of users', error});
+         }
+    },
+    // devuelve un usuario al pasarle su correo como parámetro
     async getByEmail(req, res){
         try {
             const user = await User.findOne({email:req.params.email});
