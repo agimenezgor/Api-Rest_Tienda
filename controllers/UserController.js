@@ -94,7 +94,7 @@ const UserController = {
     // Actualiza un usuario en la base de datos
     async update(req, res){
         try {
-            const user = await User.findOneAndUpdate({email:req.params.email}, req.body);
+            const user = await User.findOneAndUpdate({email:req.params.email}, req.body, {new:true});
             res.send({user, message: 'Usuario actualizado correctamente'});
         } catch (error) {
             console.log(error);
