@@ -52,7 +52,6 @@ const UserController = {
     },
     // Registra un usuario en la base de datos
     async register(req, res){
-        // falta determinar un rol de usuario
         try {
             const user = await User.create(req.body);
             res.send({user, message: 'Usuario creado correctamente'});
@@ -76,6 +75,7 @@ const UserController = {
             res.status(500).send({message:'There was a problem trying to delete the user', error});
         }
     },
+    // Logea el usuario en el sistema
     async login(req, res){
         try {
             const user = await User.findOne({email:req.params.user});
@@ -90,7 +90,17 @@ const UserController = {
             console.error(error);
             res.status(500).send({message:'There was a problem trying to login the user', error});
         }
-    }
+    },
+    // Actualiza un usuario en la base de datos
+    async update(req, res){
+        try {
+            const user = await User.findOneAndUpdate({email:req.params.email}, req.body);
+            res.send({user, message: 'Usuario actualizado correctamente'});
+        } catch (error) {
+            console.log(error);
+            res.status(500).send({message:'There was a problem trying to update the user', error});
+        }
+    },
 }
 
 module.exports = UserController;
