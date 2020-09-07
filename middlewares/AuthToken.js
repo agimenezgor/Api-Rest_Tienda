@@ -2,12 +2,13 @@ const jwt = require('jsonwebtoken');
 const CONFIG = require('../config/config');
 
 const AccesoVendedor = [
-    "/users/all/user", 
-    "/users/all/seller"
+    "/email/:email",
+    "/all/user",
+    "/all/seller"
 ];
 
 const AccesoUsuario = [
-    "/users/all"
+    "/update/:email"
 ];
 
 module.exports = function(req, res, next){
