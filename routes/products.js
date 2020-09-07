@@ -5,8 +5,43 @@ const ProductController = require('../controllers/ProductController');
 /* GET products listing. */
 
 // retorna todos los productos
-router.get('/', ProductController.getAll);
+// acceso a todos los roles de usuario
+router.get('/all', ProductController.getAll);
 
-// inserta un usuario en la base de datos
+// inserta un producto en la base de datos
+// acceso solo a adminstradores
 router.post('/', ProductController.register);
+
+/* // inserta un producto en la base de datos
+// acceso solo a adminstradores
+router.post('/', ProductController.register); */
+
+/* // inserta un producto en la base de datos
+// acceso solo a adminstradores
+router.post('/', ProductController.register); */
+
+// inserta un producto en la base de datos
+// acceso solo a adminstradores
+/* router.post('/', ProductController.register); */
+
+// inserta un producto en la base de datos
+// acceso solo a adminstradores
+/* router.post('/', ProductController.register); */
+
+// inserta un producto en la base de datos
+// acceso solo a adminstradores
+/* router.post('/', ProductController.register); */
+
+// inserta un producto en la base de datos
+// acceso solo a adminstradores
+/* router.post('/', ProductController.register); */
+
+// inserta un producto en la base de datos
+// acceso solo a adminstradores
+/* router.post('/', ProductController.register); */
+
+// inserta un producto en la base de datos
+// acceso solo a adminstradores
+/* router.post('/', ProductController.register); */
+
 module.exports = router;
