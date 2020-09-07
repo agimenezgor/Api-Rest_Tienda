@@ -1,5 +1,7 @@
 const User = require('../models/User');
 const bcrypt = require('bcrypt-nodejs');
+const jwt = require('jsonwebtoken');
+const CONFIG = require('../config/config');
 const UserController = {
     // devuelve todos los users
     async getAll(req, res) {
@@ -79,15 +81,23 @@ const UserController = {
     // Logea el usuario en el sistema
     async login(req, res){
         try {
-            const user = await User.findOne({email:req.params.user});
+            const user = await User.findOne({email:req.body.email});
             if(!user){
                 res.send({message: 'El usuario no existe en la base de datos'});
             }else {
-                const isMatch = await user.isValidPassword(req.params.password);
+                const isMatch = await user.isValidPassword(req.body.password);
                 if(!isMatch){
                     res.send({message: 'La contraseña es incorrecta'});
-                }else{res.send(
-                    {message: 'Sesión iniciada correctamente', user})
+                }else{
+                    payload = {
+                        email: user.email,
+                        role: user.role
+                    }
+                    jwt.sign(payload, CONFIG.SECRET_TOKEN, function(error, token){
+                        if(error){
+                            res.status(500).send({error})
+                        }res.send({message: 'Sesión iniciada correctamente', user, token});
+                    }) 
                 }
             }    
         } catch (error) {

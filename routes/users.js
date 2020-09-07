@@ -26,7 +26,7 @@ router.post('/register', UserController.register);
 router.delete('/delete/:email', UserController.delete);
 
 // Logea un usuario a traves de su email y su contraseña
-router.get('/login/:user/:password', UserController.login);
+router.get('/login', UserController.login);
 
 // Actualiza los datos de un usuario
 router.put('/update/:email', UserController.update);
