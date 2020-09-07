@@ -1,4 +1,5 @@
 const User = require('../models/User');
+const bcrypt = require('bcrypt-nodejs');
 const UserController = {
     // devuelve todos los users
     async getAll(req, res) {
@@ -81,11 +82,14 @@ const UserController = {
             const user = await User.findOne({email:req.params.user});
             if(!user){
                 res.send({message: 'El usuario no existe en la base de datos'});
-            }else if(user.password != req.params.password){
-                res.send({message: 'La contraseña es incorrecta'});
-            }else{res.send(
-                {message: 'Sesión iniciada correctamente', user})
-            }
+            }else {
+                const isMatch = await user.isValidPassword(req.params.password);
+                if(!isMatch){
+                    res.send({message: 'La contraseña es incorrecta'});
+                }else{res.send(
+                    {message: 'Sesión iniciada correctamente', user})
+                }
+            }    
         } catch (error) {
             console.error(error);
             res.status(500).send({message:'There was a problem trying to login the user', error});
