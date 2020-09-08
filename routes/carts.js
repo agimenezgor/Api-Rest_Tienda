@@ -26,7 +26,7 @@ router.post('/register', CartController.register);
 
 // modifica los datos de factura
 // acceso solo para role admin y vendedor
-/* router.get('/update/seller', CartController.updateBySeller); */
+/* router.update('/update/seller', CartController.updateBySeller); */
 
 // retorna la recaudación total de la tienda
 // acceso solo para role admin y vendedor
