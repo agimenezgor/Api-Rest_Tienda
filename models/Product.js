@@ -13,11 +13,11 @@ const ProductSchema = new mongoose.Schema({
     categoria: {
         type: String,
         required: [true, 'La categoria es necesaria'],
-        enum: ['CATEGORIA1', 'CATEGORIA2', 'CATEGORIA3']
+        enum: ['utilitario', 'compacto', 'berlina', 'cabrio', 'familiar', 'monovolumen', 'suv']
     },
     stock: {
         type: Number,
-        required: [true, 'El stock es necesario']
+        default: 0
     },
     vendidos: {
         type: Number,

@@ -1,0 +1,601 @@
+[{
+  "nombre": "Sable",
+  "categoria": "berlina",
+  "precio": 64809.01,
+  "stock": 5,
+  "vendidos": 0
+}, {
+  "nombre": "Jetta",
+  "categoria": "familiar",
+  "precio": 33164.27,
+  "stock": 4,
+  "vendidos": 0
+}, {
+  "nombre": "Pilot",
+  "categoria": "monovolumen",
+  "precio": 48967.23,
+  "stock": 5,
+  "vendidos": 0
+}, {
+  "nombre": "Eurovan",
+  "categoria": "familiar",
+  "precio": 85204.03,
+  "stock": 5,
+  "vendidos": 0
+}, {
+  "nombre": "Sportage",
+  "categoria": "suv",
+  "precio": 97218.76,
+  "stock": 0,
+  "vendidos": 0
+}, {
+  "nombre": "Dakota",
+  "categoria": "cabrio",
+  "precio": 93549.5,
+  "stock": 5,
+  "vendidos": 0
+}, {
+  "nombre": "Express 1500",
+  "categoria": "berlina",
+  "precio": 79890.9,
+  "stock": 2,
+  "vendidos": 0
+}, {
+  "nombre": "Impreza",
+  "categoria": "cabrio",
+  "precio": 58669.99,
+  "stock": 5,
+  "vendidos": 0
+}, {
+  "nombre": "Range Rover Sport",
+  "categoria": "monovolumen",
+  "precio": 91281.24,
+  "stock": 3,
+  "vendidos": 0
+}, {
+  "nombre": "Firebird",
+  "categoria": "monovolumen",
+  "precio": 64957.59,
+  "stock": 0,
+  "vendidos": 0
+}, {
+  "nombre": "A8",
+  "categoria": "monovolumen",
+  "precio": 97319.8,
+  "stock": 0,
+  "vendidos": 0
+}, {
+  "nombre": "Grand Vitara",
+  "categoria": "berlina",
+  "precio": 52611.35,
+  "stock": 1,
+  "vendidos": 0
+}, {
+  "nombre": "TL",
+  "categoria": "monovolumen",
+  "precio": 85682.22,
+  "stock": 0,
+  "vendidos": 0
+}, {
+  "nombre": "Titan",
+  "categoria": "utilitario",
+  "precio": 62061.47,
+  "stock": 0,
+  "vendidos": 0
+}, {
+  "nombre": "R-Class",
+  "categoria": "cabrio",
+  "precio": 76729.24,
+  "stock": 1,
+  "vendidos": 0
+}, {
+  "nombre": "C-Class",
+  "categoria": "familiar",
+  "precio": 57348.79,
+  "stock": 3,
+  "vendidos": 0
+}, {
+  "nombre": "Mountaineer",
+  "categoria": "cabrio",
+  "precio": 49589.86,
+  "stock": 5,
+  "vendidos": 0
+}, {
+  "nombre": "Eldorado",
+  "categoria": "suv",
+  "precio": 25590.46,
+  "stock": 5,
+  "vendidos": 0
+}, {
+  "nombre": "Town & Country",
+  "categoria": "familiar",
+  "precio": 61882.08,
+  "stock": 1,
+  "vendidos": 0
+}, {
+  "nombre": "911",
+  "categoria": "utilitario",
+  "precio": 84301.68,
+  "stock": 1,
+  "vendidos": 0
+}, {
+  "nombre": "Express 2500",
+  "categoria": "familiar",
+  "precio": 74722.08,
+  "stock": 1,
+  "vendidos": 0
+}, {
+  "nombre": "Classic",
+  "categoria": "cabrio",
+  "precio": 71131.66,
+  "stock": 3,
+  "vendidos": 0
+}, {
+  "nombre": "Prelude",
+  "categoria": "utilitario",
+  "precio": 51243.26,
+  "stock": 4,
+  "vendidos": 0
+}, {
+  "nombre": "4Runner",
+  "categoria": "compacto",
+  "precio": 60865.01,
+  "stock": 2,
+  "vendidos": 0
+}, {
+  "nombre": "QX56",
+  "categoria": "utilitario",
+  "precio": 94080.29,
+  "stock": 1,
+  "vendidos": 0
+}, {
+  "nombre": "Talon",
+  "categoria": "suv",
+  "precio": 69643.73,
+  "stock": 5,
+  "vendidos": 0
+}, {
+  "nombre": "Explorer",
+  "categoria": "familiar",
+  "precio": 39272.24,
+  "stock": 0,
+  "vendidos": 0
+}, {
+  "nombre": "Century",
+  "categoria": "berlina",
+  "precio": 10034.5,
+  "stock": 1,
+  "vendidos": 0
+}, {
+  "nombre": "Grand Vitara",
+  "categoria": "monovolumen",
+  "precio": 41279.48,
+  "stock": 0,
+  "vendidos": 0
+}, {
+  "nombre": "CC",
+  "categoria": "berlina",
+  "precio": 23120.62,
+  "stock": 4,
+  "vendidos": 0
+}, {
+  "nombre": "Vandura 1500",
+  "categoria": "suv",
+  "precio": 47401.7,
+  "stock": 3,
+  "vendidos": 0
+}, {
+  "nombre": "Routan",
+  "categoria": "suv",
+  "precio": 84452.68,
+  "stock": 3,
+  "vendidos": 0
+}, {
+  "nombre": "Mazda6",
+  "categoria": "monovolumen",
+  "precio": 52940.46,
+  "stock": 4,
+  "vendidos": 0
+}, {
+  "nombre": "Oasis",
+  "categoria": "compacto",
+  "precio": 48581.62,
+  "stock": 3,
+  "vendidos": 0
+}, {
+  "nombre": "Aveo",
+  "categoria": "cabrio",
+  "precio": 32960.46,
+  "stock": 5,
+  "vendidos": 0
+}, {
+  "nombre": "Avalon",
+  "categoria": "compacto",
+  "precio": 29066.61,
+  "stock": 1,
+  "vendidos": 0
+}, {
+  "nombre": "Alero",
+  "categoria": "suv",
+  "precio": 87575.87,
+  "stock": 3,
+  "vendidos": 0
+}, {
+  "nombre": "NSX",
+  "categoria": "monovolumen",
+  "precio": 51157.14,
+  "stock": 1,
+  "vendidos": 0
+}, {
+  "nombre": "80",
+  "categoria": "berlina",
+  "precio": 67989.48,
+  "stock": 0,
+  "vendidos": 0
+}, {
+  "nombre": "A5",
+  "categoria": "utilitario",
+  "precio": 94328.17,
+  "stock": 3,
+  "vendidos": 0
+}, {
+  "nombre": "xD",
+  "categoria": "suv",
+  "precio": 86110.49,
+  "stock": 5,
+  "vendidos": 0
+}, {
+  "nombre": "Justy",
+  "categoria": "suv",
+  "precio": 71423.41,
+  "stock": 5,
+  "vendidos": 0
+}, {
+  "nombre": "Riviera",
+  "categoria": "berlina",
+  "precio": 24256.38,
+  "stock": 3,
+  "vendidos": 0
+}, {
+  "nombre": "Durango",
+  "categoria": "cabrio",
+  "precio": 65732.85,
+  "stock": 2,
+  "vendidos": 0
+}, {
+  "nombre": "Quattroporte",
+  "categoria": "monovolumen",
+  "precio": 57676.1,
+  "stock": 5,
+  "vendidos": 0
+}, {
+  "nombre": "Highlander",
+  "categoria": "monovolumen",
+  "precio": 43992.68,
+  "stock": 1,
+  "vendidos": 0
+}, {
+  "nombre": "Pajero",
+  "categoria": "cabrio",
+  "precio": 93250.62,
+  "stock": 0,
+  "vendidos": 0
+}, {
+  "nombre": "Focus",
+  "categoria": "monovolumen",
+  "precio": 42478.76,
+  "stock": 2,
+  "vendidos": 0
+}, {
+  "nombre": "i-Series",
+  "categoria": "familiar",
+  "precio": 73301.76,
+  "stock": 2,
+  "vendidos": 0
+}, {
+  "nombre": "LeSabre",
+  "categoria": "utilitario",
+  "precio": 92353.49,
+  "stock": 3,
+  "vendidos": 0
+}, {
+  "nombre": "LTD Crown Victoria",
+  "categoria": "compacto",
+  "precio": 98882.07,
+  "stock": 1,
+  "vendidos": 0
+}, {
+  "nombre": "Rally Wagon 2500",
+  "categoria": "berlina",
+  "precio": 36969.24,
+  "stock": 4,
+  "vendidos": 0
+}, {
+  "nombre": "M5",
+  "categoria": "utilitario",
+  "precio": 39823.02,
+  "stock": 5,
+  "vendidos": 0
+}, {
+  "nombre": "Insight",
+  "categoria": "suv",
+  "precio": 20481.36,
+  "stock": 3,
+  "vendidos": 0
+}, {
+  "nombre": "Civic Si",
+  "categoria": "suv",
+  "precio": 29068.14,
+  "stock": 1,
+  "vendidos": 0
+}, {
+  "nombre": "Fusion",
+  "categoria": "familiar",
+  "precio": 10589.51,
+  "stock": 3,
+  "vendidos": 0
+}, {
+  "nombre": "Alcyone SVX",
+  "categoria": "utilitario",
+  "precio": 14454.46,
+  "stock": 5,
+  "vendidos": 0
+}, {
+  "nombre": "Yukon Denali",
+  "categoria": "compacto",
+  "precio": 37488.12,
+  "stock": 3,
+  "vendidos": 0
+}, {
+  "nombre": "SC",
+  "categoria": "familiar",
+  "precio": 92318.07,
+  "stock": 5,
+  "vendidos": 0
+}, {
+  "nombre": "Solstice",
+  "categoria": "compacto",
+  "precio": 62667.56,
+  "stock": 2,
+  "vendidos": 0
+}, {
+  "nombre": "Sorento",
+  "categoria": "familiar",
+  "precio": 86217.22,
+  "stock": 2,
+  "vendidos": 0
+}, {
+  "nombre": "Colorado",
+  "categoria": "monovolumen",
+  "precio": 63344.12,
+  "stock": 4,
+  "vendidos": 0
+}, {
+  "nombre": "Optima",
+  "categoria": "berlina",
+  "precio": 77162.49,
+  "stock": 4,
+  "vendidos": 0
+}, {
+  "nombre": "MPV",
+  "categoria": "monovolumen",
+  "precio": 24494.63,
+  "stock": 4,
+  "vendidos": 0
+}, {
+  "nombre": "Lumina",
+  "categoria": "familiar",
+  "precio": 26602.95,
+  "stock": 5,
+  "vendidos": 0
+}, {
+  "nombre": "S8",
+  "categoria": "berlina",
+  "precio": 86161.13,
+  "stock": 0,
+  "vendidos": 0
+}, {
+  "nombre": "Firebird",
+  "categoria": "suv",
+  "precio": 13361.21,
+  "stock": 5,
+  "vendidos": 0
+}, {
+  "nombre": "Explorer",
+  "categoria": "suv",
+  "precio": 87621.03,
+  "stock": 5,
+  "vendidos": 0
+}, {
+  "nombre": "Continental",
+  "categoria": "compacto",
+  "precio": 59882.46,
+  "stock": 4,
+  "vendidos": 0
+}, {
+  "nombre": "Accord",
+  "categoria": "compacto",
+  "precio": 59497.6,
+  "stock": 1,
+  "vendidos": 0
+}, {
+  "nombre": "Continental GTC",
+  "categoria": "compacto",
+  "precio": 84482.29,
+  "stock": 1,
+  "vendidos": 0
+}, {
+  "nombre": "Venza",
+  "categoria": "compacto",
+  "precio": 67585.48,
+  "stock": 5,
+  "vendidos": 0
+}, {
+  "nombre": "G-Series 2500",
+  "categoria": "familiar",
+  "precio": 43070.67,
+  "stock": 3,
+  "vendidos": 0
+}, {
+  "nombre": "Dakota",
+  "categoria": "compacto",
+  "precio": 34903.1,
+  "stock": 0,
+  "vendidos": 0
+}, {
+  "nombre": "MX-5",
+  "categoria": "familiar",
+  "precio": 53466.98,
+  "stock": 4,
+  "vendidos": 0
+}, {
+  "nombre": "F350",
+  "categoria": "monovolumen",
+  "precio": 72071.27,
+  "stock": 2,
+  "vendidos": 0
+}, {
+  "nombre": "Precis",
+  "categoria": "familiar",
+  "precio": 28061.01,
+  "stock": 0,
+  "vendidos": 0
+}, {
+  "nombre": "Lancer",
+  "categoria": "monovolumen",
+  "precio": 35309.0,
+  "stock": 5,
+  "vendidos": 0
+}, {
+  "nombre": "Probe",
+  "categoria": "berlina",
+  "precio": 79520.59,
+  "stock": 1,
+  "vendidos": 0
+}, {
+  "nombre": "Firefly",
+  "categoria": "suv",
+  "precio": 79592.56,
+  "stock": 1,
+  "vendidos": 0
+}, {
+  "nombre": "Suburban 2500",
+  "categoria": "berlina",
+  "precio": 13420.95,
+  "stock": 3,
+  "vendidos": 0
+}, {
+  "nombre": "Tribute",
+  "categoria": "utilitario",
+  "precio": 36561.07,
+  "stock": 2,
+  "vendidos": 0
+}, {
+  "nombre": "Protege",
+  "categoria": "suv",
+  "precio": 10194.0,
+  "stock": 4,
+  "vendidos": 0
+}, {
+  "nombre": "Forester",
+  "categoria": "utilitario",
+  "precio": 60394.04,
+  "stock": 4,
+  "vendidos": 0
+}, {
+  "nombre": "Probe",
+  "categoria": "compacto",
+  "precio": 52512.4,
+  "stock": 2,
+  "vendidos": 0
+}, {
+  "nombre": "G-Class",
+  "categoria": "suv",
+  "precio": 98421.09,
+  "stock": 5,
+  "vendidos": 0
+}, {
+  "nombre": "Venture",
+  "categoria": "cabrio",
+  "precio": 73834.43,
+  "stock": 0,
+  "vendidos": 0
+}, {
+  "nombre": "Santa Fe",
+  "categoria": "utilitario",
+  "precio": 20665.97,
+  "stock": 0,
+  "vendidos": 0
+}, {
+  "nombre": "Jetta",
+  "categoria": "utilitario",
+  "precio": 50273.54,
+  "stock": 1,
+  "vendidos": 0
+}, {
+  "nombre": "DTS",
+  "categoria": "suv",
+  "precio": 56985.13,
+  "stock": 4,
+  "vendidos": 0
+}, {
+  "nombre": "Viper",
+  "categoria": "compacto",
+  "precio": 25874.89,
+  "stock": 5,
+  "vendidos": 0
+}, {
+  "nombre": "GL-Class",
+  "categoria": "berlina",
+  "precio": 69382.27,
+  "stock": 3,
+  "vendidos": 0
+}, {
+  "nombre": "Esteem",
+  "categoria": "cabrio",
+  "precio": 56617.75,
+  "stock": 0,
+  "vendidos": 0
+}, {
+  "nombre": "3000GT",
+  "categoria": "utilitario",
+  "precio": 85515.21,
+  "stock": 2,
+  "vendidos": 0
+}, {
+  "nombre": "Galant",
+  "categoria": "suv",
+  "precio": 55429.25,
+  "stock": 4,
+  "vendidos": 0
+}, {
+  "nombre": "LS",
+  "categoria": "monovolumen",
+  "precio": 31980.19,
+  "stock": 2,
+  "vendidos": 0
+}, {
+  "nombre": "Dakota",
+  "categoria": "suv",
+  "precio": 79192.73,
+  "stock": 3,
+  "vendidos": 0
+}, {
+  "nombre": "Corolla",
+  "categoria": "cabrio",
+  "precio": 74057.58,
+  "stock": 3,
+  "vendidos": 0
+}, {
+  "nombre": "CX-5",
+  "categoria": "monovolumen",
+  "precio": 89379.17,
+  "stock": 3,
+  "vendidos": 0
+}, {
+  "nombre": "G3",
+  "categoria": "berlina",
+  "precio": 46705.95,
+  "stock": 4,
+  "vendidos": 0
+}]

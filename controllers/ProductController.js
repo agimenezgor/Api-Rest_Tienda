@@ -1,5 +1,15 @@
 const Product = require('../models/Product');
+const coches = require('../ddbb_coches.json');
 const ProductController = {
+    async registerAll(req, res){
+        try {
+            await Product.create(coches);
+            res.send({product, message: 'Coches subidos a la base de datos'});
+        } catch (error) {
+            console.log(error);
+            res.status(500).send({message:'There was a problem trying to register all of cars', error});
+        }
+    },
     async register(req, res){
         try {
            const product = await Product.create(req.body);
@@ -9,24 +19,34 @@ const ProductController = {
             res.status(500).send({message:'There was a problem trying to register the product', error});
         }
     },
-    /* async delete(req, res){
+    async delete(req, res){
         try {
-           const product = await Product.create(req.body);
-           res.send({product, message: 'Producto creado correctamente'});
+            const product = await Product.findOneAndDelete({nombre:req.body.nombre});
+            if(product){
+                 res.send({message: 'Producto borrado correctamente', product});
+            }else{
+             res.send({message: 'Producto no encontrado'});
+            }
+            
+         } catch (error) {
+             console.error(error);
+             res.status(500).send({message:'There was a problem trying to delete the product', error});
+         }
+    },
+    async update(req, res){
+        try {
+            const product = await Product.findOneAndUpdate({nombre:req.body.nombre}, req.body, {new:true});
+            if(product){
+                res.send({product, message: 'Producto actualizado correctamente'});
+            }else{
+                res.send({message: 'Producto no encontrado'});
+            }
+            
         } catch (error) {
             console.log(error);
-            res.status(500).send({message:'There was a problem trying to register the product', error});
+            res.status(500).send({message:'There was a problem trying to update the product', error});
         }
-    }, */
-    /* async update(req, res){
-        try {
-           const product = await Product.create(req.body);
-           res.send({product, message: 'Producto creado correctamente'});
-        } catch (error) {
-            console.log(error);
-            res.status(500).send({message:'There was a problem trying to register the product', error});
-        }
-    }, */
+    },
     async getAll(req, res) {
         try {
             const products = await Product.find();
@@ -36,24 +56,24 @@ const ProductController = {
              res.status(500).send({message:'There was a problem trying to get the products', error});
          }
     },
-    /* async getByCategory(req, res){
+    async getByCategory(req, res){
         try {
-           const product = await Product.create(req.body);
-           res.send({product, message: 'Producto creado correctamente'});
+            const products = await Product.find({categoria:req.body.categoria});
+            res.send(products);
         } catch (error) {
             console.log(error);
-            res.status(500).send({message:'There was a problem trying to register the product', error});
+            res.status(500).send({message:'There was a problem trying to get the products by category', error});
         }
-    } */
-    /* async getByPrice(req, res){
+    },
+    async getByPrice(req, res){
         try {
-           const product = await Product.create(req.body);
-           res.send({product, message: 'Producto creado correctamente'});
+            const products = await Product.find({precio: {$gte: req.body.mayorQue}, precio: {$lte: req.body.menorQue}});
+            res.send(products);
         } catch (error) {
             console.log(error);
-            res.status(500).send({message:'There was a problem trying to register the product', error});
+            res.status(500).send({message:'There was a problem trying to get the products by price', error});
         }
-    } */
+    },
     /* async getBySeller(req, res){
         try {
            const product = await Product.create(req.body);
@@ -63,33 +83,33 @@ const ProductController = {
             res.status(500).send({message:'There was a problem trying to register the product', error});
         }
     } */
-    /* async getSoldByCategory(req, res){
+    async getSoldByCategory(req, res){
         try {
-           const product = await Product.create(req.body);
-           res.send({product, message: 'Producto creado correctamente'});
+           const products = await Product.find({categoria: req.body.categoria, vendidos: {$gt: 0}});
+           res.send(products);
         } catch (error) {
             console.log(error);
-            res.status(500).send({message:'There was a problem trying to register the product', error});
+            res.status(500).send({message:'There was a problem trying to get the solded products by category', error});
         }
-    } */
-    /* async stockByCategory(req, res){
+    },
+    async stockByCategory(req, res){
         try {
-           const product = await Product.create(req.body);
-           res.send({product, message: 'Producto creado correctamente'});
+            const products = await Product.find({stock: {$gt: 0}, categoria: req.body.categoria});
+            res.send(products);
         } catch (error) {
             console.log(error);
-            res.status(500).send({message:'There was a problem trying to register the product', error});
+            res.status(500).send({message:'There was a problem trying to get the products in stock by category', error});
         }
-    } */
-    /* async allInStock(req, res){
+    },
+    async allInStock(req, res){
         try {
-           const product = await Product.create(req.body);
-           res.send({product, message: 'Producto creado correctamente'});
+            const products = await Product.find({stock: {$gt: 0}});
+            res.send(products);
         } catch (error) {
             console.log(error);
-            res.status(500).send({message:'There was a problem trying to register the product', error});
+            res.status(500).send({message:'There was a problem trying to get the products in stock', error});
         }
-    } */
+    }
 }
 
 module.exports = ProductController;
