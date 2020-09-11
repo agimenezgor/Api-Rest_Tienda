@@ -24,22 +24,24 @@ const CartController = {
             res.status(500).send({message:'There was a problem trying to update the cart', error});
         }
     },
-    /* async getAll(req, res){
+    async getAll(req, res){
         try {
-            
+            const carts = await Cart.find();
+            res.send(carts);  
         } catch (error) {
             console.log(error);
             res.status(500).send({message:'There was a problem trying to get all the carts', error});
         }
-    }, */
-    /* async getByUser(req, res){
+    },
+    async getByUser(req, res){
         try {
-            
+            const carts = await Cart.find({userEmail: req.body.userEmail});
+            res.send(carts);
         } catch (error) {
             console.log(error);
             res.status(500).send({message:'There was a problem trying to get the carts by user', error});
         }
-    }, */
+    },
     /* async getBySeller(req, res){
         try {
             

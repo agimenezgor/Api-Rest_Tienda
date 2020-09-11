@@ -14,11 +14,11 @@ router.put('/update', CartController.update);
 
 // retorna todos los actos de venta
 // acceso para todos los roles de usuario
-/* router.get('/all', CartController.getAll); */
+router.get('/all', CartController.getAll);
 
 // retorna todos los actos de venta de un usuario
 // acceso para todos los roles de usuario
-/* router.get('/all/user', CartController.getByUser); */
+router.get('/all/user', CartController.getByUser);
 
 // retorna todos los actos de venta de un vendedor
 // acceso solo para role admin y vendedor
