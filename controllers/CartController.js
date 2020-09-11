@@ -59,14 +59,19 @@ const CartController = {
             res.status(500).send({message:'There was a problem trying to update the cart by seller', error});
         }
     }, */
-    /* async storeCollection(req, res){
+    async storeCollection(req, res){
         try {
-            recaudación de la tienda
+            const carts = await Cart.find();
+            var collection = 0;
+            carts.map(function(cart){
+                collection += cart.precioTotal;
+            })
+            res.send({collection});
         } catch (error) {
             console.log(error);
             res.status(500).send({message:'There was a problem trying to get the store collection', error});
         }
-    } */
+    }
 }
 
 module.exports = CartController;

@@ -30,6 +30,6 @@ router.get('/all/seller', CartController.getBySeller);
 
 // retorna la recaudación total de la tienda
 // acceso solo para role admin y vendedor
-/* router.get('/store/collection', CartController.storeCollection); */
+router.get('/store/collection', CartController.storeCollection);
 
 module.exports = router;
