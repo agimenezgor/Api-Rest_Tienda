@@ -33,6 +33,15 @@ const CartController = {
             res.status(500).send({message:'There was a problem trying to get all the carts', error});
         }
     },
+    async getByCartNumber(req, res){
+        try {
+            const cart = await Cart.find({cartNumber: req.body.cartNumber});
+            res.send(cart);  
+        } catch (error) {
+            console.log(error);
+            res.status(500).send({message:'There was a problem trying to get the cart by cart number', error});
+        }
+    },
     async getByUser(req, res){
         try {
             const carts = await Cart.find({userEmail: req.body.userEmail});
@@ -51,14 +60,16 @@ const CartController = {
             res.status(500).send({message:'There was a problem trying to get the carts by seller', error});
         }
     },
-    /* async updateBySeller(req, res){
+    async updateBySeller(req, res){
         try {
-            
+            // comprobar que la factura pertenece al vendedor
+            // si es así, actualizar
+
         } catch (error) {
             console.log(error);
             res.status(500).send({message:'There was a problem trying to update the cart by seller', error});
         }
-    }, */
+    },
     async storeCollection(req, res){
         try {
             const carts = await Cart.find();

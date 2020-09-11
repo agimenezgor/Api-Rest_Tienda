@@ -16,6 +16,10 @@ router.put('/update', CartController.update);
 // acceso para todos los roles de usuario
 router.get('/all', CartController.getAll);
 
+// retorna un acto de venta al pasarle el número de acto de venta como parámetro
+// acceso para todos los roles de usuario
+router.get('/cartNumber', CartController.getByCartNumber);
+
 // retorna todos los actos de venta de un usuario
 // acceso para todos los roles de usuario
 router.get('/all/user', CartController.getByUser);
