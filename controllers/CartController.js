@@ -42,14 +42,15 @@ const CartController = {
             res.status(500).send({message:'There was a problem trying to get the carts by user', error});
         }
     },
-    /* async getBySeller(req, res){
+    async getBySeller(req, res){
         try {
-            
+            const carts = await Cart.find({sellerEmail: req.body.sellerEmail});
+            res.send(carts);
         } catch (error) {
             console.log(error);
             res.status(500).send({message:'There was a problem trying to get the carts by seller', error});
         }
-    }, */
+    },
     /* async updateBySeller(req, res){
         try {
             
