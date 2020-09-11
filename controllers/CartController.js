@@ -62,9 +62,8 @@ const CartController = {
     },
     async updateBySeller(req, res){
         try {
-            // comprobar que la factura pertenece al vendedor
-            // si es así, actualizar
-
+            const cart = await Cart.findOneAndUpdate({cartNumber: req.body.cartNumber, sellerEmail: req.body.sellerEmail}, req.body, {new:true});
+            res.send({cart, message: 'Acto de venta actualizado correctamente por el vendedor'})
         } catch (error) {
             console.log(error);
             res.status(500).send({message:'There was a problem trying to update the cart by seller', error});

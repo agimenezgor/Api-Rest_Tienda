@@ -30,7 +30,7 @@ router.get('/all/seller', CartController.getBySeller);
 
 // modifica los datos de factura
 // acceso solo para role admin y vendedor
-/* router.update('/update/seller', CartController.updateBySeller); */
+router.put('/update/seller', CartController.updateBySeller);
 
 // retorna la recaudación total de la tienda
 // acceso solo para role admin y vendedor
