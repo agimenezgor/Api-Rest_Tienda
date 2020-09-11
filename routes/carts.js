@@ -10,7 +10,7 @@ router.post('/register', CartController.register);
 
 // actualiza un acto de venta
 // acceso para todos los roles de usuario
-/* router.put('/update', CartController.update); */
+router.put('/update', CartController.update);
 
 // retorna todos los actos de venta
 // acceso para todos los roles de usuario
