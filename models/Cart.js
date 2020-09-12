@@ -75,7 +75,9 @@ CartSchema.pre('save', async function(next) {
             for(let y = 0; y < thisProd.length; y++){
                 if(productos[i].nombre === thisProd[y].nombre){
                     encontrados++
-                    // comprobar que los productos estan en stock
+                    // calcular precio total
+                    this.precioTotal += productos[i].precio * thisProd[y].cantidad;
+                    // comprobar que los productos están en stock y que hay suficiente stock
                     if(productos[i].stock <= 0 || thisProd[y].cantidad > productos[i].stock){
                         console.log("producto: ", productos[i].nombre);
                         console.log("cantidad en stock: ",productos[i].stock);
@@ -94,7 +96,7 @@ CartSchema.pre('save', async function(next) {
         // adjudicar número de factura autoincremental
         const carts = await Cart.find();
         this.numeroActoVenta = carts.length + 1
-        
+
         next()
     } catch (error) {
         next(error)
