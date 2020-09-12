@@ -81,6 +81,20 @@ const CartController = {
             console.log(error);
             res.status(500).send({message:'There was a problem trying to get the store collection', error});
         }
+    },
+    async payCart(req, res){
+        try {
+            const cart = await Cart.findOneAndUpdate({numeroActoVenta:req.body.numeroActoVenta},{$set: {pagado: true}}, {new:true});
+            if(cart){
+
+                res.send({cart, message: 'Acto de venta pagado correctamente'});
+            }else{
+                res.send({message: 'Acto de venta no encontrado'});
+            } 
+        } catch (error) {
+            console.log(error);
+            res.status(500).send({message:'There was a problem trying to pay the cart', error});
+        }
     }
 }
 

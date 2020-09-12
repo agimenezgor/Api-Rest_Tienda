@@ -36,4 +36,8 @@ router.put('/update/seller', CartController.updateBySeller);
 // acceso solo para role admin y vendedor
 router.get('/store/collection', CartController.storeCollection);
 
+// Actualiza el acto de venta como pagado
+// acceso a todos los roles de usuario
+router.put('/pay', CartController.payCart);
+
 module.exports = router;
