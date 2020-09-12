@@ -13,7 +13,7 @@ const CartController = {
     },
     async update(req, res){
         try {
-           const cart = await Cart.findOneAndUpdate({cartNumber:req.body.cartNumber}, req.body, {new:true});
+           const cart = await Cart.findOneAndUpdate({numeroActoVenta:req.body.numeroActoVenta}, req.body, {new:true});
             if(cart){
                 res.send({cart, message: 'Acto de venta actualizado correctamente'});
             }else{
@@ -35,7 +35,7 @@ const CartController = {
     },
     async getByCartNumber(req, res){
         try {
-            const cart = await Cart.find({cartNumber: req.body.cartNumber});
+            const cart = await Cart.find({numeroActoVenta: req.body.numeroActoVenta});
             res.send(cart);  
         } catch (error) {
             console.log(error);
@@ -44,7 +44,7 @@ const CartController = {
     },
     async getByUser(req, res){
         try {
-            const carts = await Cart.find({userEmail: req.body.userEmail});
+            const carts = await Cart.find({usuario: req.body.usuario});
             res.send(carts);
         } catch (error) {
             console.log(error);
@@ -53,7 +53,7 @@ const CartController = {
     },
     async getBySeller(req, res){
         try {
-            const carts = await Cart.find({sellerEmail: req.body.sellerEmail});
+            const carts = await Cart.find({vendedor: req.body.vendedor});
             res.send(carts);
         } catch (error) {
             console.log(error);
@@ -62,7 +62,7 @@ const CartController = {
     },
     async updateBySeller(req, res){
         try {
-            const cart = await Cart.findOneAndUpdate({cartNumber: req.body.cartNumber, sellerEmail: req.body.sellerEmail}, req.body, {new:true});
+            const cart = await Cart.findOneAndUpdate({numeroActoVenta: req.body.numeroActoVenta, vendedor: req.body.vendedor}, req.body, {new:true});
             res.send({cart, message: 'Acto de venta actualizado correctamente por el vendedor'})
         } catch (error) {
             console.log(error);
