@@ -71,7 +71,7 @@ const CartController = {
     },
     async storeCollection(req, res){
         try {
-            const carts = await Cart.find();
+            const carts = await Cart.find({pagado: true});
             var collection = 0;
             carts.map(function(cart){
                 collection += cart.precioTotal;
@@ -91,6 +91,15 @@ const CartController = {
             }else{
                 res.send({message: 'Acto de venta no encontrado'});
             } 
+        } catch (error) {
+            console.log(error);
+            res.status(500).send({message:'There was a problem trying to pay the cart', error});
+        }
+    },
+    async getPaidOutCarts(req, res){
+        try {
+            const carts = await Cart.find({pagado:true});
+            res.send(carts);
         } catch (error) {
             console.log(error);
             res.status(500).send({message:'There was a problem trying to pay the cart', error});

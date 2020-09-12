@@ -40,4 +40,8 @@ router.get('/store/collection', CartController.storeCollection);
 // acceso a todos los roles de usuario
 router.put('/pay', CartController.payCart);
 
+// retorna los actos de venta pagados
+// acceso solo para role admin y vendedor
+router.get('/paidOut', CartController.getPaidOutCarts);
+
 module.exports = router;
