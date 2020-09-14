@@ -9,11 +9,11 @@ const ProductController = require('../controllers/ProductController');
 router.post('/register/all', ProductController.registerAll);
 
 // inserta un producto en la base de datos
-// acceso solo a adminstradores
+// acceso solo a administradores
 router.post('/register', ProductController.register);
 
 // elimina un producto en la base de datos
-// acceso solo a adminstradores
+// acceso solo a administradores
 router.delete('/delete', ProductController.delete);
 
 // actualiza un producto en la base de datos

@@ -13,7 +13,7 @@ router.post('/register', CartController.register);
 router.put('/update', CartController.update);
 
 // retorna todos los actos de venta
-// acceso para todos los roles de usuario
+// acceso para roles de administrador y vendedor
 router.get('/all', CartController.getAll);
 
 // retorna un acto de venta al pasarle el número de acto de venta como parámetro
@@ -29,7 +29,7 @@ router.get('/all/user', CartController.getByUser);
 router.get('/all/seller', CartController.getBySeller);
 
 // modifica los datos de factura
-// acceso solo para role admin y vendedor
+// acceso solo para role vendedor
 router.put('/update/seller', CartController.updateBySeller);
 
 // retorna la recaudación total de la tienda
