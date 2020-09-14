@@ -5,6 +5,7 @@ Se trata de una api-rest para una e-commerce mediante express que utiliza Mongod
 Los endpoints de la Api son los siguientes:
 
 Usuario:
+
     - /users/all 
     Método get que devuelve todos los usuarios de la base de datos.
     Acceso solo usuarios con role de administrador.
@@ -42,6 +43,7 @@ Usuario:
     Acceso para todos los roles de usuario.
 
 Producto:
+
     - /products/register/all
     Método post que registra todos los productos de ddbb_coches.json para poder testear la Api con facilidad.
     Acceso para todos los roles de usuario.
@@ -87,6 +89,7 @@ Producto:
     Acceso para todos los roles de usuario.
 
 Actos de venta: 
+
     - /carts/register
     Método post que registra un nuevo acto de venta.
     Acceso para todos los roles de usuario.
