@@ -17,7 +17,7 @@ router.post('/register', ProductController.register);
 router.delete('/delete', ProductController.delete);
 
 // actualiza un producto en la base de datos
-// acceso solo a adminstradores
+// acceso solo a administradores
 router.put('/update', ProductController.update);
 
 // retorna todos los productos
@@ -33,11 +33,11 @@ router.get('/all/category', ProductController.getByCategory);
 router.get('/all/price', ProductController.getByPrice);
 
 // retorna todos los productos vendidos por un vendedor
-// acceso solo a adminstradores y vendedores
-/* router.get('/all/seller', ProductController.getBySeller); */
+// acceso solo a administradores y vendedores
+router.get('/all/seller', ProductController.getBySeller);
 
 // retorna todos los productos vendidos de una categoría
-// acceso solo a adminstradores y vendedores
+// acceso solo a administradores y vendedores
 router.get('/all/category/sold', ProductController.getSoldByCategory);
 
 // retorna todos los productos en stock de una categoría
