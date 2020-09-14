@@ -2,13 +2,40 @@ const jwt = require('jsonwebtoken');
 const CONFIG = require('../config/config');
 
 const AccesoVendedor = [
-    "/email/:email",
-    "/all/user",
-    "/all/seller"
+    "/users/email/:email",
+    "/users/all/user",
+    "/users/all/seller",
+    "/users/update/:email",
+    "/products/all",
+    "/products/all/category",
+    "/products/all/price",
+    "/products/all/seller",
+    "/products/all/category/sold",
+    "/products/all/category/stock",
+    "/products/all/stock",
+    "/carts/register",
+    "/carts/update",
+    "/carts/all",
+    "/carts/cartNumber",
+    "/carts/all/user",
+    "/carts/all/seller",
+    "/carts/update/seller",
+    "/carts/store/collection",
+    "/carts/pay",
+    "/carts/payOut"
 ];
 
 const AccesoUsuario = [
-    "/update/:email"
+    "/users/update/:email",
+    "/products/all",
+    "/products/all/category",
+    "/products/all/price",
+    "/products/all/stock",
+    "/carts/register",
+    "/carts/update",
+    "/carts/cartNumber",
+    "/carts/all/user",
+    "/carts/pay"
 ];
 
 module.exports = function(req, res, next){
