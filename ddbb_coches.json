@@ -167,7 +167,7 @@
   "stock": 1,
   "vendidos": 0
 }, {
-  "nombre": "Grand Vitara",
+  "nombre": "Grand Vitare",
   "categoria": "monovolumen",
   "precio": 41279.48,
   "stock": 0,
@@ -395,13 +395,13 @@
   "stock": 0,
   "vendidos": 0
 }, {
-  "nombre": "Firebird",
+  "nombre": "Firebirds",
   "categoria": "suv",
   "precio": 13361.21,
   "stock": 5,
   "vendidos": 0
 }, {
-  "nombre": "Explorer",
+  "nombre": "Explorers",
   "categoria": "suv",
   "precio": 87621.03,
   "stock": 5,
@@ -437,7 +437,7 @@
   "stock": 3,
   "vendidos": 0
 }, {
-  "nombre": "Dakota",
+  "nombre": "Dakoto",
   "categoria": "compacto",
   "precio": 34903.1,
   "stock": 0,
@@ -503,7 +503,7 @@
   "stock": 4,
   "vendidos": 0
 }, {
-  "nombre": "Probe",
+  "nombre": "Prober",
   "categoria": "compacto",
   "precio": 52512.4,
   "stock": 2,
@@ -527,7 +527,7 @@
   "stock": 0,
   "vendidos": 0
 }, {
-  "nombre": "Jetta",
+  "nombre": "Jetto",
   "categoria": "utilitario",
   "precio": 50273.54,
   "stock": 1,
@@ -575,7 +575,7 @@
   "stock": 2,
   "vendidos": 0
 }, {
-  "nombre": "Dakota",
+  "nombre": "Dakote",
   "categoria": "suv",
   "precio": 79192.73,
   "stock": 3,

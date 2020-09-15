@@ -5,7 +5,7 @@ const ProductController = {
     async registerAll(req, res){
         try {
             await Product.create(coches);
-            res.send({product, message: 'Coches subidos a la base de datos'});
+            res.send({message: 'Coches subidos a la base de datos'});
         } catch (error) {
             console.log(error);
             res.status(500).send({message:'There was a problem trying to register all of cars', error});
