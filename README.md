@@ -2,6 +2,12 @@ Proyecto final del Bootcamp de Backend con express de Geekshubs academy.
 
 Se trata de una api-rest para una e-commerce mediante express que utiliza Mongodb como base de datos y que gestiona todos los datos de los usuarios, productos y actos de venta de la tienda. 
 
+Para empezar:
+    - npm install (para instalar node modules)
+    - npm start (para arrancar la API REST)
+
+pd: Es necesario tener MongoDB instalado para poder arrancar la API REST. 
+
 Los endpoints de la Api son los siguientes:
 
 Usuario:
