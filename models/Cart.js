@@ -71,28 +71,27 @@ CartSchema.pre('save', async function(next) {
         const productos = await Product.find();
         var thisProd = this.productos;
         let encontrados = 0;
-        for(let i = 0; i < productos.length; i++){
-            for(let y = 0; y < thisProd.length; y++){
-                if(productos[i].nombre === thisProd[y].nombre){
+        productos.map(function(obj){
+            thisProd.map(function(ele) {
+                if(obj.nombre === ele.nombre){
                     encontrados++
                     // calcular precio total
-                    this.precioTotal += productos[i].precio * thisProd[y].cantidad;
+                    this.precioTotal +=obj.precio * ele.cantidad;
                     // comprobar que los productos están en stock y que hay suficiente stock
-                    if(productos[i].stock <= 0 || thisProd[y].cantidad > productos[i].stock){
-                        console.log("producto: ", productos[i].nombre);
-                        console.log("cantidad en stock: ",productos[i].stock);
-                        console.log("cantidad pedida: ", thisProd[y].cantidad);
+                    if(obj.stock <= 0 || ele.cantidad > obj.stock){
+                        console.log("producto: ", obj.nombre);
+                        console.log("cantidad en stock: ", obj.stock);
+                        console.log("cantidad pedida: ", ele.cantidad);
                         var err = new Error('El producto no tiene suficiente stock');
                         next(err);
                     }
                 }
-            }
-        }
+            })
+        })
         if(encontrados !== thisProd.length){
             var err = new Error('El producto no existe en la base de datos');
             next(err); 
         }
-
         // adjudicar número de factura autoincremental
         const carts = await Cart.find();
         this.numeroActoVenta = carts.length + 1
