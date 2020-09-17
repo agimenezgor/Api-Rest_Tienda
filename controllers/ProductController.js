@@ -77,38 +77,27 @@ const ProductController = {
     },
     async getBySeller(req, res){
         try {
-            // Guardamos los actos de venta
             const carts = await Cart.find({vendedor: req.body.vendedor});
-            // Array en el que guardaremos los productos y cantidades vendidas
             var productsArray = new Array();
-            // Recorremos los actos de venta
-            for(var i = 0; i < carts.length; i++){
-                // Recorremos los productos del acto de venta
-                for(var j = 0; j < carts[i].productos.length; j++){
-                    // Guardamos el producto en un nuevo objeto
-                    var prod = new Object();
-                    prod.nombre = carts[i].productos[j].nombre;
-                    prod.cantidad = carts[i].productos[j].cantidad;
-                    // Recorremos el array de actos de venta y comprobamos si el producto existe en el array
+            carts.map(function(obj){
+                obj.productos.map(function(el) {
                     let encontrado = false;
                     let productIndex = 0;
-                    for(let x = 0; x < productsArray.length; x++){
-                        if(productsArray[x].nombre === prod.nombre){
-                            productIndex = x;
+                    var prod = {nombre: el.nombre, cantidad: el.cantidad}
+                    productsArray.map(function(ele, index) {
+                        if(ele.nombre === prod.nombre){
+                            productIndex = index;
                             encontrado = true;
-                            x = productsArray.length;
                         }
-                    }
-                    // Si existe en el array a devolver, sumamos la cantidad
+                    })
                     if(encontrado){
                         productsArray[productIndex].cantidad = productsArray[productIndex].cantidad + prod.cantidad;
                     }
-                    // Si no existe, hacemos push en el array
                     else{
                         productsArray.push(prod);
                     }
-                }
-            }   
+                })
+            })
             res.send(productsArray)
         } catch (error) {
             console.log(error);
