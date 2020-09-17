@@ -6,7 +6,7 @@ const UserController = require('../controllers/UserController');
 
 // retorna todos los usuarios
 // acceso solo para role admin
-router.get('/all', UserController.getAll);
+router.get('/', UserController.getAll);
 
 // retorna un usuario a traves de su email
 // acceso solo para roles admin y vendedor
@@ -38,6 +38,6 @@ router.post('/login', UserController.login);
 
 // Actualiza los datos de un usuario
 // acceso a todos los roles
-router.put('/update/:email', UserController.update);
+router.put('/update', UserController.update);
 
 module.exports = router;

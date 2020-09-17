@@ -14,7 +14,7 @@ router.post('/register', ProductController.register);
 
 // elimina un producto en la base de datos
 // acceso solo a administradores
-router.delete('/delete', ProductController.delete);
+router.delete('/', ProductController.delete);
 
 // actualiza un producto en la base de datos
 // acceso solo a administradores
@@ -22,7 +22,7 @@ router.put('/update', ProductController.update);
 
 // retorna todos los productos
 // acceso a todos los roles de usuario
-router.get('/all', ProductController.getAll);
+router.get('/', ProductController.getAll);
 
 // retorna los productos de la categoría elegida
 // acceso a todos los roles de usuario

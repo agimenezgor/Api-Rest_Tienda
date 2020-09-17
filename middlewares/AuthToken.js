@@ -6,8 +6,8 @@ const SellerAccess = [
     "/users/email/:email",
     "/users/all/user",
     "/users/all/seller",
-    "/users/update/:email",
-    "/products/all",
+    "/users/:email",
+    "/products/",
     "/products/all/category",
     "/products/all/price",
     "/products/all/seller",
@@ -16,7 +16,7 @@ const SellerAccess = [
     "/products/all/stock",
     "/carts/register",
     "/carts/update",
-    "/carts/all",
+    "/carts/",
     "/carts/cartNumber",
     "/carts/all/user",
     "/carts/all/seller",
@@ -27,8 +27,8 @@ const SellerAccess = [
 ];
 
 const UserAccess = [
-    "/users/update/:email",
-    "/products/all",
+    "/users/update",
+    "/products/",
     "/products/all/category",
     "/products/all/price",
     "/products/all/stock",
@@ -67,7 +67,7 @@ module.exports = async function(req, res, next){
                         if(pathFound){
                             next();
                         }else{
-                            res.status(403).send({message: 'No tienes suficientes permisos para acceder al contenido'});
+                            res.status(403).send({message: 'No tienes suficientes permisos para acceder al contenido con tu perfil de usuario'});
                         }
                     }
                 }

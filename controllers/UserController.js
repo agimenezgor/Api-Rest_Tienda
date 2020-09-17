@@ -108,8 +108,14 @@ const UserController = {
     // Actualiza un usuario en la base de datos
     async update(req, res){
         try {
-            const user = await User.findOneAndUpdate({email:req.params.email}, req.body, {new:true});
-            res.send({user, message: 'Usuario actualizado correctamente'});
+            let token = req.headers.authorization.split(' ')[1];
+            const payload = jwt.verify(token, CONFIG.SECRET_TOKEN);
+            console.log(payload.email)
+            if(req.body.email === payload.email){
+                const user = await User.findOneAndUpdate({email:req.body.email}, req.body, {new:true});
+                res.send({user, message: 'Usuario actualizado correctamente'});
+            }
+            res.send({message: 'No tienes acceso a este usuario'});
         } catch (error) {
             console.log(error);
             res.status(500).send({message:'There was a problem trying to update the user', error});

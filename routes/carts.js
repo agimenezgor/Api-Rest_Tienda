@@ -14,7 +14,7 @@ router.put('/update', CartController.update);
 
 // retorna todos los actos de venta
 // acceso para roles de administrador y vendedor
-router.get('/all', CartController.getAll);
+router.get('/', CartController.getAll);
 
 // retorna un acto de venta al pasarle el número de acto de venta como parámetro
 // acceso para todos los roles de usuario
