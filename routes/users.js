@@ -34,7 +34,7 @@ router.delete('/delete/:email', UserController.delete);
 
 // Logea un usuario a traves de su email y su contraseña
 // acceso a todos los roles
-router.get('/login', UserController.login);
+router.post('/login', UserController.login);
 
 // Actualiza los datos de un usuario
 // acceso a todos los roles
