@@ -55,6 +55,7 @@ const UserController = {
     // Registra un usuario en la base de datos
     async register(req, res){
         try {
+            req.body.role = 'usuario';
             const user = await User.create(req.body);
             res.send({user, message: 'Usuario creado correctamente'});
         } catch (error) {
