@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 const CONFIG = require('../config/config');
 const User = require('../models/User');
 
-const AccesoVendedor = [
+const SellerAccess = [
     "/users/email/:email",
     "/users/all/user",
     "/users/all/seller",
@@ -26,7 +26,7 @@ const AccesoVendedor = [
     "/carts/payOut"
 ];
 
-const AccesoUsuario = [
+const UserAccess = [
     "/users/update/:email",
     "/products/all",
     "/products/all/category",
@@ -55,16 +55,16 @@ module.exports = async function(req, res, next){
                     next();
                 }else {
                     if(user.role == 'vendedor'){
-                        let pathEncontrado = AccesoVendedor.includes(req.path);
-                        if(pathEncontrado){
+                        let pathFound = SellerAccess.includes(req.path);
+                        if(pathFound){
                             next();
                         }else{
                             res.status(403).send({message: 'No tienes suficientes permisos para acceder al contenido'});
                         }
                     }
                     else{
-                        let pathEncontrado = AccesoUsuario.includes(req.path);
-                        if(pathEncontrado){
+                        let pathFound = UserAccess.includes(req.path);
+                        if(pathFound){
                             next();
                         }else{
                             res.status(403).send({message: 'No tienes suficientes permisos para acceder al contenido'});

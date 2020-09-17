@@ -1,11 +1,11 @@
 const Product = require('../models/Product');
-const coches = require('../ddbb_coches.json');
+const cars = require('../cars_ddbb.json');
 const Cart = require('../models/Cart');
 const ProductController = {
     async registerAll(req, res){
         try {
-            await Product.create(coches);
-            res.send({message: 'Coches subidos a la base de datos'});
+            await Product.create(cars);
+            res.send({message: 'cars subidos a la base de datos'});
         } catch (error) {
             console.log(error);
             res.status(500).send({message:'There was a problem trying to register all of cars', error});
