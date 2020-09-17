@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const bcrypt =  require('bcryptjs');
+var timestamps = require('mongoose-timestamp');
 const UserSchema = new mongoose.Schema({
     nombre: {
         type: String,
@@ -22,10 +23,6 @@ const UserSchema = new mongoose.Schema({
     },
     direccion: {
         type: String,
-    },
-    fechaCreacion: {
-        type: Date,
-        default: Date.now
     }
 }, {
     toJSON: {
@@ -36,6 +33,7 @@ const UserSchema = new mongoose.Schema({
     }
 });
 
+UserSchema.plugin(timestamps);
 UserSchema.pre('save', async function(next) {
     try {
         const salt = await bcrypt.genSalt(9);
