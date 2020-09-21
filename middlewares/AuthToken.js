@@ -16,7 +16,7 @@ const SellerAccess = [
     "/products/all/stock",
     "/carts/register",
     "/carts/update",
-    "/carts/",
+    "/carts",
     "/carts/cartNumber",
     "/carts/all/user",
     "/carts/all/seller",
@@ -38,6 +38,45 @@ const UserAccess = [
     "/carts/all/user",
     "/carts/pay"
 ];
+function authArray(array, string){
+    if(array.includes(string)){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+function authPath(array, path){
+    var strpath = path.split('/');
+    var lnght = strpath.length - 1;
+    if(lnght === 1 || lnght === 4){
+        if(authArray(array, path)){return true;}
+        else{return false;}
+    }
+    else if(lnght === 3){
+        var stringpath = '/' + strpath[1] + '/' + strpath[2];
+        if(strpath[3].includes('@')){
+            stringpath += '/:email'; 
+        }else{
+            stringpath += '/';
+            stringpath += strpath[3];
+        }
+        if(authArray(array, stringpath)){return true;}
+        else{return false;}
+    }
+    else if(lnght === 2){
+        var stringpath = '/' + strpath[1];
+        if(strpath[2].includes('@')){
+            stringpath += '/:email'; 
+        }else{
+            stringpath += '/';
+            stringpath += strpath[2];
+        }
+        if(authArray(array, stringpath)){return true;}
+        else{return false;}
+    }
+}
 
 module.exports = async function(req, res, next){
     if(req.path != '/users/login' && req.path != '/users/register'){
@@ -55,7 +94,7 @@ module.exports = async function(req, res, next){
                     next();
                 }else {
                     if(user.role == 'vendedor'){
-                        let pathFound = SellerAccess.includes(req.path);
+                        let pathFound = authPath(SellerAccess, req.path);
                         if(pathFound){
                             next();
                         }else{
@@ -63,7 +102,7 @@ module.exports = async function(req, res, next){
                         }
                     }
                     else{
-                        let pathFound = UserAccess.includes(req.path);
+                        let pathFound = authPath(UserAccess, req.path);
                         if(pathFound){
                             next();
                         }else{
